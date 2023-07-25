@@ -1,11 +1,11 @@
 /* свойства модального окна по умолчанию */
-.openmodal {
+.modal-email {
     position: fixed; /* фиксированное положение */
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* цвет фона */
+    background: rgba(255, 255, 255, 0.238); /* цвет фона */
     z-index: 1050;
     opacity: 0; /* по умолчанию модальное окно прозрачно */
     -webkit-transition: opacity 200ms ease-in; 
@@ -16,26 +16,26 @@
     padding: 0;
 }
 /* при отображении модального окно */
-.openmodal:target {
+.modal-email:target {
     opacity: 1; /* делаем окно видимым */
 	  pointer-events: auto; /* элемент видим для событий мыши */
     overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 /* ширина модального окна и его отступы от экрана */
-.openmodal-dialog {
+.modal-email-dialog {
     position: relative;
     width: auto;
     margin: 10px;
 }
 @media (min-width: 576px) {
-.openmodal-dialog {
+.modal-email-dialog {
     max-width: 950px;
     margin: 50px auto; /* для отображения модального окна по центру */
 }
 
 }
 /* свойства для блока, содержащего контент модального окна */ 
-.openmodal-content {
+.modal-email-content {
     text-align:center;
     position: relative;
     display: -webkit-box;
@@ -47,22 +47,22 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(43, 135, 165, 0.812);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.097);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: .3rem;
     outline: 0;
 }
 @media (min-width: 768px) {
-.openmodal-content {
+.modal-email-content {
     -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
 }
 
 }
 /* свойства для заголовка модального окна */
-.openmodal-header {
+c-header {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -76,35 +76,17 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 10px solid #000000;
+    border-bottom: 5px solid #000000;
 }
-.openmodal-title {
+.modal-email-title {
     line-height: 1.5;
     font-size: 1.25rem;
-    font-weight: 1500;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
     
 }
-/* свойства для кнопки "Закрыть" */
-.close {
-    float: right;
-    font-family: sans-serif;
-    font-size: 35px;
-    font-weight: 800;
-    line-height: 1;
-    color: #ff0000;
-    text-shadow: 0 1px 0 rgb(161, 21, 21);
-    opacity: .5;
-    text-decoration: none;
-}
-/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
-.close:focus, .close:hover {
-    color: #37909b;
-    text-decoration: none;
-    cursor: pointer;
-    opacity: .75;
-}
 /* свойства для блока, содержащего основное содержимое окна */
-.openmodal-body {
+.modal-email-body {
     position: relative;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -116,21 +98,30 @@
 }
 
 .img {
+
     padding: 50px;
+
 }
 
-.btn {
+.email-btn {
 	background: #6be5fd5b;
-	border-radius: 50px;
+	border-radius: 5px;
 	color: #ffffff;
-	font-size: 15px;
-	padding: 8px 8px;
+	font-size: 18px;
+	padding: 10px 20px;
 	text-decoration: none;
 	position: absolute;
-    top: 100%;
-    left: 31%;
+    top: 110%;
+    left: 25%;
 }
-.btn:hover {
+.email-btn:hover {
 	background: rgb(255, 106, 0);}
 
-    
+.email-form{
+	padding: 150px;
+}
+.email-form p{
+	padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+}

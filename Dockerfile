@@ -2,6 +2,7 @@
 FROM python:3.11.4
 
 # Установка зависимостей Flask
+RUN pip3 install --upgrade pip
 COPY app/requirements.txt /app/requirements.txt
 RUN pip3 install -r /app/requirements.txt
 

@@ -8,11 +8,12 @@
 
 	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='main.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='win.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='winemail.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='email.css') }}">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='images/launch.ico') }}">
 
+	<script src="{{ url_for('static', filename='js/jquery-3.6.3.min.js') }}"></script>
 	<script defer src="https://kit.fontawesome.com/1f1ce1e187.js" crossorigin="anonymous"></script>
-	
-	<script defer src="app/jquery-3.6.3.min.js"></script>
 	
 	<title>XaTa</title>
 	
@@ -21,32 +22,32 @@
 <body>
 
 	<div class="logo-mono">Мини мониторинг:
-		
 	{% for website, status in status_list %}
-	<p>{{ website }} - {{ status }}</p>
+	<p>{{ website }} - {{ status }}
 	{% endfor %}
-		
+
 	</div>
-		
+
 	<div class="description">
 		<div class="loader">🛸</div>
 		<div class="logo">HtmL?</div>
 		<p>Сайт представлен как "Портфолио". Данный сайт содержит исключительно рабочий процесс🚀</p>
-		<a href="#openModal" class="btn">Подробнее о проектах</a>
+		<p><a href="#open-modal" class="btn">Подробнее о проектах</a></p>
 		
 		<ul class="lotesules">
-			
+
 			<div class="copy"><p>copyright © 2023</p></div>	
-			
-		<a href="https://github.com/ismetskoy"><i class="fa fa-github"></i></a></li>
-		<a href="https://vk.com/felhat"><i class="fa fa-vk"></i></a></li>
-		<a href="https://t.me/IvanSmec"><i class="fa fa-telegram"></i></a></li>
-		<a href="https://t.me/XaTaProgbot"><i class="fa fa-grav"></i></a></li>
+
+		<a href="https://github.com/ismetskoy"><i class="fa fa-github"></i></a>
+		<a href="https://vk.com/felhat"><i class="fa fa-vk"></i></a>
+		<a href="https://t.me/IvanSmec"><i class="fa fa-telegram"></i></a>
+		<a href="https://t.me/XaTaProgbot"><i class="fa fa-grav"></i></a>
+		<a href="#open-email"><i class="fa fa-envelope-o"></i></a>
 		
 		</ul>
 
 	</div>
-	
+
 	<div class="vanous-nevog">
 
 		<div class="kasavin-egedsa">
@@ -126,49 +127,89 @@
 		</div>		
 		</div>
 		</div>	
-</body>
-		
-		<div id="openModal" class="modal">
-			<div class="modal-dialog">
-			<div class="modal-content">
-			<div class="modal-header">
-				<h3 class="modal-title">Мои работы и проекты 👋</h3>
-				<a href="#close" title="Закрыть" class="close">×</a>
-			</div>
-		<div class="modal-body">    <p>
-				<p>Имеется два VPS-сервера. На которых крутится система Ubuntu 22.04</p>
-				<p>	На сервере VPS-5.182: </p>
-					Распологается Portainer в котором крутятся Doker и Docker compose
-				<br>
-					<img src="/static/images/Docker.JPG" padding="50px">
-				<br>
-					Данный сайт написан на HTML+CSS и работает на веб.сервере Nginx. 
-					Для мониторинга приложений и серверов используется Prometheus с готовыми Exporter
-				<br>
-				<img src="/static/images/Prometheus.JPG">
-				<br>
-				<p>Визуализация в Grafana</p>
-				<br>
-				<img src="/static/images/Grafana.JPG">
-				<br>
-				<p>	Настроенна система Alertmanager с оповощением в Telepush </p>
-				<br>
-				<img src="/static/images/Alertmanager.JPG">
-				<br>	
-				<p>	Данные перенаправляются через Nginx Proxy Manager + SSL</p>
-				<br>	
-				<img src="/static/images/Nginx Proxy Manager.JPG">
-				<br>	
-				<p>	На сервере VPS-83.220: </p>
-				<br>
-					Также установлен Portainer agent
-				<br>	
-					На нем крутится Telegrambot. Который несет простую функицию в виде гороскопа.
-				<br>	
-				<img src="/static/images/Telega.JPG"></p>
-			</div>
-			</div>
-			</div>
-			</div>
 
+</body>
+
+		<div id="open-modal" class="openmodal">
+			<div class="openmodal-dialog">
+			<div class="openmodal-content">
+			<div class="openmodal-header">
+		<h3 class="openmodal-title">Мои работы и проекты 👋</h3>
+		<a href="#close" title="Закрыть" class="close">×</a>
+		</div>
+		<div class="modal-body">    <p>
+		<p>Имеется два VPS-сервера. На которых крутится система Ubuntu 22.04</p>
+		<p>	На сервере VPS-5.182: </p>
+			Распологается Portainer в котором крутятся Doker и Docker compose
+		<br>
+			<img src="/static/images/Docker.JPG" >
+		<br>
+			Данный сайт написан на HTML+CSS и работает на веб.сервере Nginx. 
+			Для мониторинга приложений и серверов используется Prometheus с готовыми Exporter
+		<br>
+		<img src="/static/images/Prometheus.JPG">
+		<br>
+		<p>Визуализация в Grafana</p>
+		<br>
+		<img src="/static/images/Grafana.JPG">
+		<br>
+		<p>	Настроенна система Alertmanager с оповощением в Telepush </p>
+		<br>
+		<img src="/static/images/Alertmanager.JPG">
+		<br>	
+		<p>	Данные перенаправляются через Nginx Proxy Manager + SSL</p>
+		<br>	
+		<img src="/static/images/Nginx Proxy Manager.JPG">
+		<br>	
+		<p>	На сервере VPS-83.220: </p>
+		<br>
+			Также установлен Portainer agent
+		<br>	
+			На нем крутится Telegrambot. Который несет простую функицию в виде гороскопа.
+		<br>	
+		<img src="/static/images/Telega.JPG"></p>
+
+		</div>
+		</div>
+		</div>
+		</div>
+
+
+		<div id="open-email" class="modal-email">
+		<div class="modal-email-dialog">
+		<a href="#close" title="Закрыть" class="close">×</a>
+
+
+
+
+			<div class="ufive-feedback">
+				<section id="feedback">
+					<h2>ФОРМА ОБРАТНОЙ СВЯЗИ 👋 </h2>
+
+					<form action="/send_email" method="POST">
+					<div class="field name-box">
+					  <input type="text" name="subject" id="name" placeholder="Тема письма" />
+					  <label for="name">Тема</label>
+					</div>
+			  
+					<div class="field email-box">
+					  <input type="text" name="sender" id="email" placeholder="felhat.test@bk.ru" />
+					  <label for="email">Автор</label>
+					</div>
+
+					<div class="field email-box">
+						<input type="text" name="recipients" id="email" placeholder="Ваш e-mail адрес" />
+						<label for="email">E-mail</label>
+					  </div>
+			  
+					<div class="field msg-box">
+					  <textarea id="msg" name="body" rows="4" placeholder="Излагайте ваш вопрос четко и подробно" /></textarea>
+					  <label for="msg">Текст</label>
+					</div>
+			  
+					<input class="button" type="submit" value="Отправить 🚀" />
+			  
+				  </form>
+				</section>
+			  </div>
 </html>

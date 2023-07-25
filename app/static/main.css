@@ -177,10 +177,20 @@ body, html {
 	flex-basis: 33.333333333%;
 	}
 }
-
 .loader {
 	animation: spin 30s linear infinite;
 }
 @keyframes spin {
 	100% { transform: translate(1050px,-5950%); }
+}
+.backmail {
+	position: absolute;
+	left: 40%;
+	top: 35%;
+}
+.backmail p {
+	color: #F5E2CD;
+	max-width: 100%;
+	font: italic small-caps bold 16px/2 cursive;
+	text-align:center;
 }

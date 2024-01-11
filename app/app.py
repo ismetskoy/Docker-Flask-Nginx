@@ -6,7 +6,8 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.mail.ru'
 app.config['MAIL_PORT'] = 465  
 app.config['MAIL_USE_SSL'] = True  
-
+app.config['MAIL_USERNAME'] = 'felhat.test@bk.ru'
+app.config['MAIL_PASSWORD'] = 'EnzHe7ZbM3hiEY9a6ap9'
 
 mail = Mail(app)
 
@@ -23,7 +24,7 @@ def check_website(url):
 
 @app.route('/')
 def monitor():
-    websites = ["xata-vpn.ru" , "xata-docker.ru" , "xatagrafana.ru"]
+    websites = ["xatavpn.ru" , "xatadocker.ru" , "xata-grafana.ru"]
     status_list = []
     for url in websites:
         status = check_website(url)

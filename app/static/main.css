@@ -1,196 +1,216 @@
-body, html {
-	background:linear-gradient(rgba(0, 0, 0, 0.103), rgb(0, 0, 0)),url("./images/background5.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
 }
-.description {
-	position: absolute;
-	max-width: 25%;
-	left: 10%;
-	top: 50%;
+
+a{
+    text-decoration: none;
+    color: #fff;
 }
-.description p {
-	color: #F5E2CD;
-	max-width: 100%;
-	font: italic small-caps bold 16px/2 cursive;
-	text-align:center;
+
+body {
+    color: #ffffff;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Полезно при использовании отрицательных координат */
+    position: relative; /* Необходимо для абсолютного позиционирования частей */
 }
-.logo {
-	font: italic small-caps bold 44px cursive;
-	background: linear-gradient(45deg, rgba(215, 215, 215, 0.94), rgba(0, 0, 0, 0));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	max-width: 100%;
+
+/* Анимированный градиент */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #53354a);
+    background-size: 300% 300%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+
 
 .logo-mono {
-	font: italic small-caps bold 25px cursive;
-	color: rgba(215, 215, 215, 0.94);
-	position: absolute;
-	max-width: 25%;
-	left: 18%;
-	top: 25%;
-}
-.logo-mono p{
-	font: caption;
-	color: #37909b;
-	padding: 1px;
-
+    font-size: 16px;
+    position: relative;
+    top: 25px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 20%;
+    text-align: right; /* Выравнивание текста по правому краю */
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-/* Иконки */
+.web span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    display: block;
+    padding: 10px;
+    transition: transform 0.9s ease-in-out;  /* Анимация для эффекта увеличения */
+}
+
+.web span:hover {
+    transform: scale(1.2);  /* Увеличение на 10% при наведении */
+}
 
 .lotesules {
-	max-width: 100%;
-	padding: 10px;
-	text-align:center;
-	
+    display: flex;
+    justify-content: space-between; /* Выравнивание объектов по краям с промежутками между ними */
+    font-size: 45px;
+    text-align: left;
+    gap: 10px; /* Расстояние между объектами */
 }
-.lotesules a{
-	text-decoration: none;
-	color: #ffffff;
-	padding: 5%;
-	font-size: 25px;
-}
+
 .lotesules a:hover i{
-	color: rgb(255, 106, 0);
-	transform: scale(1.5);
-}
-.copy p{
-	position: absolute;
-	left: 90%;
-	top: 180%;
-	font: italic small-caps bold 10px/2 cursive;
-	color: #F5E2CD;
+	filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7)) blur(0px);
+	transform: scale(2.0);
 }
 
-/* Меню */
+.container{
+    
+    display: flex;
+    justify-content: center;
+}
 
-.vanous-nevog { 
-	flex-wrap: wrap;
-	position: absolute;
-	max-width: 100%;
-	left: 40%;
-	top: 0%;
-	display: flex;
+.glass-container{
+    
+    display: block;
+    max-width: 70vw;
+    margin-top: 1vh;
+    background: rgba(0, 0, 0, 0.56);
+    padding: 35px;
+    border-radius: 55px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
 }
-.kasavin-egedsa {
-	padding: 5px;
-	cursor: pointer;
+
+.logo{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: -10px;
 }
-  .kasavin-egedsa * {
-	transition: .5s linear;
+
+.content{
+    display: flex;
+    width: 100%;
 }
-.kipasa-demulas {
-	background: #454b4d00;
-	padding: 15px;
+
+.main{
+    margin-top: 10vh;
+    display: inline-block;
+    padding: 20px;
 }
-.amon-saneka:before {
-	content: "";
-	font-family: FontAwesome;
-	color: #37909b;
-	font-size: 60px;
+
+.main h2{
+    font-size: 35px;
 }
-.amon-saneka.git:before {
-	content: "\f09b";
+
+.main p{
+    font-size: 16px;
+    line-height: 23px;
 }
-.amon-saneka.docker:before {
-	content: "\f395";
+
+button{
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.amon-saneka.ubuntu:before {
-	content: "\f7df";
+
+button:hover{
+    border-color: #2668db;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7)) blur(0px);
 }
-.amon-saneka.grafana:before {
-	content:url(./images/1.png);
+
+.image-wrapper{
+    display: flex;
+    margin-top: 5vh;
+    position: relative;
 }
-.amon-saneka.nginx:before {
-	content:url(./images/3.png);
+
+.image-wrapper img{
+    max-width: 500px;
 }
-.amon-saneka.gear:before {
-	content: "\f0ac";
+
+.attrebute{
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    font-size: 12px;
 }
-.kasavin-egedsa:hover .amon-saneka, .kasavin-egedsa:hover .muneka-sconsu h3, .kasavin-egedsa:hover .muneka-sconsu p {
-	transform: translateY(-8px);
+
+@media screen and (max-width: 1075px) {
+    .content{
+        flex-direction: column;
+    }
 }
-.muneka-sconsu {
-	color: #F5E2CD;
-	font-size: 16px;
+
+@media screen and (max-width: 720px) {
+    .logo{
+        font-size: 22px;
+    }
+    li.nav-link{
+        font-size: 13px;
+    }
+    .main h2{
+        font-size: 28px;
+    }
+    .main p{
+        font-size: 15px;
+    }
+    button{
+        font-size: 13px;
+    }
+    .image-wrapper img{
+        max-width: 400px;
+    }
 }
-.muneka-sconsu h3 {
-	margin-bottom: 25px;
-	transition-delay: .1s;
+
+@keyframes flyUpRight {
+    0%, 0% { transform: translate(0, 0); }
+    90%, 100% { transform: translate(100vw, -100vh); }
 }
-.muneka-sconsu p {
-	transition-delay: .1s;
+
+.rocket2 {
+    animation: flyUpRight 360s linear; /* Увеличенное время для добавления паузы */
+    display: inline-block;
+    position: absolute;
 }
-.item-footer {
-	padding-top: 10px;
+
+
+.rocket:hover {
+    transform: scale(1.5) rotate(15deg) translateY(-10px); /* Увеличение, вращение, и перемещение вверх при наведении */
+    opacity: 1; /* Полная непрозрачность при наведении */
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7)) blur(0px); /* Свечение и размытие при наведении */
 }
-.link {
-	text-decoration: none;
-	display: inline-block;
-	overflow: hidden;
-	position: relative;
-	padding-right: 150px;
-	font-size: 15px;
-	text-transform: uppercase;
-	font-weight: 600;
-	color: #37909b;
-}
-.link:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	bottom: 0;
-	height: .125rem;
-	margin: auto;
-	background:rgb(255, 106, 0);
-	transform: scaleX(.2);
-	transform-origin: left center;
-	z-index: 0;
-	transition: .6s cubic-bezier(.6, .01, 0, 1);
-}
-.link span {
-	display: inline-block;
-	position: relative;
-	transform: translateX(-200%);
-	transition: .6s cubic-bezier(.6, .01, 0, 1);
-}
-.kasavin-egedsa:hover .link span {
-	transform: translateX(0%);
-}
-.kasavin-egedsa:hover .link:before {
-	transform-origin: right center;
-}
-@media (min-width: 768px) {
-	.kasavin-egedsa {
-	flex-basis: 50%;
-	flex-shrink: 0;
-	}
-}
-@media (min-width: 960px) {
-	.kasavin-egedsa {
-	flex-basis: 33.333333333%;
-	}
-}
-.loader {
-	animation: spin 30s linear infinite;
-}
-@keyframes spin {
-	100% { transform: translate(1050px,-5950%); }
-}
-.backmail {
-	position: absolute;
-	left: 40%;
-	top: 35%;
-}
-.backmail p {
-	color: #F5E2CD;
-	max-width: 100%;
-	font: italic small-caps bold 16px/2 cursive;
-	text-align:center;
-}
+
+
+

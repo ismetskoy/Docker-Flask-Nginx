@@ -6,7 +6,7 @@ RUN pip3 install --upgrade pip
 COPY app/requirements.txt /app/requirements.txt
 RUN pip3 install -r /app/requirements.txt
 
-# Копирование кода приложения
+# Копирование кода приложения 1
 COPY app /app
 WORKDIR /app
 

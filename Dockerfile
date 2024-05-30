@@ -19,5 +19,5 @@ RUN apt update && apt install -y nginx && apt install nano
 # Копирование конфигурации Nginx
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# Открытие порта 49153
+# Открытие порта 49153 3
 EXPOSE 49153
